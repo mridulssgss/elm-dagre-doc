@@ -100,7 +100,7 @@ used for other directions.
   
   ![Stroke Width](./pic20.png)
 
-  ![Stroke Width](./pic21.png)
+  ![Stroke Width](./pic24.png)
 
   Some of the Node Attributes are:
   - **shape**: Takes limited shape type to give it to node.
