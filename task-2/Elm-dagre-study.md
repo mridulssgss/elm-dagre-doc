@@ -7,7 +7,7 @@
 
 
 
-The Dagre.Attribute contains types and functions to set the attributes corresponding to algorithm.
+The Dagre.Attribute contains types and functions to set the attributes corresponding to each algorithm.
 
 Common constraint:
 -  All numeric attributes can not have values < 0. If a value `v` < 0
@@ -23,16 +23,24 @@ used for other directions.
 ![LR](./pic2.png)
 - **widthDict** : It associated the nodes with its width that will be used during rendering of graph.
 
+![widthDict](./picwidthDict1.png)
+
+- **heightDict** : Same as width but sets the height.
+
+![widthDict](./picheightDict1.png)
+
+- **width** : The default value will be used when no value is available in widthDict for some node.
+
 ![width](./pic3.png)
 
 ![width](./pic4.png)
-- **heightDict** : Same as width but sets the height.
+
+- **height** : Similar as width.
 
 ![height](./pic5.png)
 
 ![height](./pic6.png)
-- **width** : The default value will be used when no value is available in widthDict for some node.
-- **height** : Similar as width.
+
 - **nodeSep** : It defines the separation value between nodes in same layer(rank).
 
 ![Node Separation](./pic7.png)
@@ -102,6 +110,10 @@ used for other directions.
 
   ![Stroke Width](./pic24.png)
 
+  - **linkStyle**: It denotes the type of arrow used in denoting Edges.
+
+  ![linkStyle](./piclineStyle.png)
+
   Some of the Node Attributes are:
   - **shape**: Takes limited shape type to give it to node.
   
@@ -110,11 +122,27 @@ used for other directions.
   
   ![Fill color](./pic23.png)
 
-  * Other attributes details can be referred inside the code for each attribute. *
+  - **strokeWidth**: It denotes the border color of the node.
+
+  ![strokeWidth](./picstrokeWidth.png)
+
+  - **strokeDashArray**: It denote the dash edges at the border of the node.
+
+  ![strokeDashArray](./picdashArray.png)
+
+  - **nodeLabel** : It is used to denote the label for each nodes.
+
+  ![nodeLabel](./picnodeLabel.png)
+
+  - **onClick**: It is used as an event listner when a particular node is clicked.
+
+  ![onClick](./piconClick.png)
+
+  *Other attributes details can be referred inside the code for each attribute.*
 
 
 
 ### 6. Why are Dagre and Render attributes separated
--  Dagre attribute are related to how the graph are presented and how they are spaced. They are intrinsically associated with algorithm that are used to draw graph like its spacing, how the nodes of each layer is layed out. 
+-  Dagre attribute are related to how the graph are presented and how they are spaced. They are intrinsically associated with algorithm that are used to draw graph like its spacing, how the nodes of each layer is laid out. 
 -  Render attributes contains the decorative attributes in drawing graphs, to present then on screen 
 - Since these attributes are not needed by the algorithm they are form a separated modules. Another reason for separation is flexiblity, now since dagre and render are separated we can easily change the dagre and render module with new module without breaking the code. 
