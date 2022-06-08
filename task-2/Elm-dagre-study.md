@@ -7,7 +7,7 @@
 
 
 
-The Dagre.Attribute contains types and functions to set the attributes corresponding to each algorithm.
+The Dagre.Attribute contains types and functions to set the attributes corresponding to algorithm.
 
 Common constraint:
 -  All numeric attributes can not have values < 0. If a value `v` < 0
